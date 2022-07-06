@@ -1,0 +1,60 @@
+PROJET Tutoré (58%)
+
+Cahier des charges (95 %)
+Diagrammes (67 %)
+Avancement Codage (23%):
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Interfaces:
+	-Connexion OK
+	-Utilisateur(PDG-RH-SIMPLE) OK
+		->Gerer
+		  -Employer(RH) -- OK
+		  -Absence/Retard(RH) -- OK 
+		  -Sanction(RH) -- NON
+		  -Demandes(SIMPLE) -- NON
+		  -Traitement(PDG) -- NON
+		->Consulter
+		  -Demandes(PDG-RH-Simple(Perso)) -- NON
+		  -Absences(PDG-RH-Simple(Perso)) -- NON
+		  -Salaires(PDG-RH-Simple(Perso)) -- NON
+		  -Sanctions(PDG-RH) -- NON
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Détails :
+	
+->Gerer
+  -Absence/Retard: 1)Rajoute les absences ou les retards d'un employé(e) 'Actif' dans la table Absences ou retards
+	    	   2)Le nombres de jours d'absence definiera un pourcentage qui est une multiplication par 8 du nombres de jours d'absences
+	    	   5)Les données seront affichées dans la table des absences ou dans la table retards
+	  
+
+  -Sanctions: 1)Il y aura les motif de sanctions(Insubordinnation, mauvais comportement, Retards , Absences) dans un combobox
+	      2)Un datagridView sera déployer pour afficher le Matricule, Prenom, Nom, Salaire D'un employé 'Actif'
+              4)les données seront envoyer dans la table des sanctions
+
+  -Traitements: 1)Un datagridview affichera le Matricule, Prenom, Nom, Type_demande, Motif_demande D'une personne ayant fait une demande
+		2)Les champs Date_debut, Date_Fin,  seront saisi par le PDG
+		3)Si accepter une modification s'effectuera dans la table demande par rapport a l'employé(e) concerner, le champ 'etat' de la demande deviendra "Accepter"
+		4)Si refuser aucune modification ne s'effectuera , le champ 'etat' de la demande deviendra "Refuser"
+
+  -Demandes: 1)Un formulaire permettant de saisir 'Type_demande' et 'Motif_demande' sera présenter à l'employer
+	     2)Des champs de saisis seront accessible ou non par rapport au type de la demande qui sera effectuer
+
+
+->Consulter
+  -
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tables:
+
+->employes(Matricule, Prenom, Nom, Mdp, Sexe, numTel, Poste, Email, Statut_Actuel, Salaire, Photo);
+->paiements(ID_paiement, Montant_paiement, Motif_paiement, Matricule_employe);
+->conges(ID_Conge, Duree_Conge, Date_debut, Date_fin, Motif_conge, Matricule_employe);
+->demandes(ID_demande, Type_demande, Date_demande, Date_debut, Date_fin, Duree, Montant, Localisation, Motif_demande, Reponse_demande, Matricule_employe, ID_paiement, ID_formation, ID_conge);
+->absence_retards(ID, Duree, Date_retard, Date_debut_absence, Date_retour_absence, Motif, Matricule_employe);
+->formations(ID_formation, Duree_formation, Date_debut_formation, Date_fin_formation, Localisation_formation, Matricule_employe);
+->sanctions(ID_sanction, Date_sanction, type, Duree, matricule_employe);
+

@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E92DFCFE-AA86-41FF-8C6C-DBA5E2D7AD1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROJET_Ressource_Humaine</RootNamespace>
+    <AssemblyName>PROJET Ressource Humaine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjoutEmployer.cs" />
+    <Compile Include="Atelier Employer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atelier Employer.Designer.cs">
+      <DependentUpon>Atelier Employer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnexionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnexionForm.Designer.cs">
+      <DependentUpon>ConnexionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons_absences_heures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cons_absences_heures.Designer.cs">
+      <DependentUpon>Cons_absences_heures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons_demandes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cons_demandes.Designer.cs">
+      <DependentUpon>Cons_demandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons_employes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cons_employes.Designer.cs">
+      <DependentUpon>Cons_employes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons_salaires.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cons_salaires.Designer.cs">
+      <DependentUpon>Cons_salaires.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons_sanctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cons_sanctions.Designer.cs">
+      <DependentUpon>Cons_sanctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerer Sanctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerer Sanctions.Designer.cs">
+      <DependentUpon>Gerer Sanctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerer_Absences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerer_Absences.Designer.cs">
+      <DependentUpon>Gerer_Absences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerer_Demandes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerer_Demandes.Designer.cs">
+      <DependentUpon>Gerer_Demandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerer_Traitements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerer_Traitements.Designer.cs">
+      <DependentUpon>Gerer_Traitements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAll.Designer.cs">
+      <DependentUpon>MenuAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierEmploy.cs" />
+    <Compile Include="MyBDD.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Atelier Employer.resx">
+      <DependentUpon>Atelier Employer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnexionForm.resx">
+      <DependentUpon>ConnexionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cons_absences_heures.resx">
+      <DependentUpon>Cons_absences_heures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cons_demandes.resx">
+      <DependentUpon>Cons_demandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cons_employes.resx">
+      <DependentUpon>Cons_employes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cons_salaires.resx">
+      <DependentUpon>Cons_salaires.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cons_sanctions.resx">
+      <DependentUpon>Cons_sanctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerer Sanctions.resx">
+      <DependentUpon>Gerer Sanctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerer_Absences.resx">
+      <DependentUpon>Gerer_Absences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerer_Demandes.resx">
+      <DependentUpon>Gerer_Demandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerer_Traitements.resx">
+      <DependentUpon>Gerer_Traitements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAll.resx">
+      <DependentUpon>MenuAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GererPersonne%2832x32%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-and-woman-avatar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wage %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auction %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Demandes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traitement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RechDemandes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConsAbsences.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RechSalaire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avocat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man%2864x64%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rechercher un employer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu-btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu-btn%2864x64%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
